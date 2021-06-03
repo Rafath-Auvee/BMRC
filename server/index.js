@@ -14,6 +14,10 @@ app.use(cors());
 
 app.use("/posts", postRoutes);
 
+app.use("/", (req, res) => {
+  res.send("Initial BMRC API");
+});
+
 const PORT = process.env.PORT || 6800;
 
 mongoose
